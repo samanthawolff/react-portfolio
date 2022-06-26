@@ -3,7 +3,6 @@ import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import Portfolio from './components/Portfolio';
-//import PhotoList from './components/PhotoList';
 
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
       ></Nav>
       <main>
         <div>
-          <Portfolio></Portfolio>
+          <Portfolio currentCategory={currentCategory}></Portfolio>
           <About></About>
         </div>
       </main>
