@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import photo from '../../assets/portfolio-img/download.png';
 
 
-function PhotoList() {
+const PhotoList = ({ category }) => {
+
     const [photos] = useState([
         {
             name: "Run Buddy",
@@ -34,14 +34,25 @@ function PhotoList() {
             category: "portfolio",
             description: "A professional ReadMe generator used from the terminal and made using various Node packages."
         }
-    ])
-
+    ]);
+  
+    const currentPhotos = photos.filter((photo) => photo.category === category);
+  
     return (
-        <div>
-            <img src={photo} alt="Portfolio Project" />
+      <div>
+        <div className="flex-row">
+          {currentPhotos.map((image, i) => (
+            <img
+              src={require(`../../assets/portfolio-img/${category}/${i}.jpg`)}
+              alt={image.name}
+              className="img-thumbnail mx-1"
+              key={image.name}
+            />
+          ))}
         </div>
-    )
-}
+      </div>
+    );
+  };
 
 
 export default PhotoList;

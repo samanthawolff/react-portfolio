@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import Portfolio from './components/Portfolio';
+//import PhotoList from './components/PhotoList';
 
 
 function App() {
