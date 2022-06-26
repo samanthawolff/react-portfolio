@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Modal from '../Modal';
 
 
 const PhotoList = ({ category }) => {
@@ -40,12 +41,14 @@ const PhotoList = ({ category }) => {
   
     return (
       <div>
+        <Modal />
         <div className="flex-row">
           {currentPhotos.map((image, i) => (
             <img
               src={require(`../../assets/portfolio-img/${category}/${i}.jpg`)}
               alt={image.name}
               className="img-thumbnail mx-1"
+              onClick={() => toggleModal(image, i)}
               key={image.name}
             />
           ))}
