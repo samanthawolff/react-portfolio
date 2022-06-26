@@ -44,9 +44,9 @@ const PhotoList = ({ category }) => {
           {currentPhotos.map((image, i) => (
             <img
               src={require(`../../assets/portfolio-img/${category}/${i}.jpg`)}
-              alt={photos.name}
+              alt={image.name}
               className="img-thumbnail mx-1"
-              key={photos.name}
+              key={image.name}
             />
           ))}
         </div>
