@@ -7,6 +7,8 @@ function Nav(props) {
        categories = [],
        setCurrentCategory,
        currentCategory,
+       contactSelected,
+       setContactSelected
    } = props;
 
    useEffect(() => {
@@ -23,7 +25,7 @@ function Nav(props) {
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a data-tesid="about" href="#about">
+                        <a data-tesid="about" href="#about" onClick={() => setContactSelected(false)} >
                             About Me
                         </a>
                     </li>
