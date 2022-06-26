@@ -6,10 +6,8 @@ import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
 
 
-const [contactSelected, setContactSelected] = useState(false);
-
-
 function App() {
+  const [contactSelected, setContactSelected] = useState(false);
   const [categories] = useState([
     {
         name: "portfolio",
