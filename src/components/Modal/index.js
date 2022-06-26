@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Modal({currentPhoto}) {
+const Modal = ({ onClose, currentPhoto }) => {
     const {name, description, category, index} = currentPhoto;
 
     return (
@@ -10,7 +10,7 @@ function Modal({currentPhoto}) {
                 <h3 className="modalTitle">{name}</h3>
                 <img src={require(`../../assets/portfolio-img/${category}/${index}.jpg`)} alt="current category" />
                 <p>{description}</p>
-                <button type="button">Exit</button>
+                <button onClick={onClose} type="button">Exit</button>
             </div>
         </div>
     )
