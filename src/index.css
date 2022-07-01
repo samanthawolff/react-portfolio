@@ -23,6 +23,15 @@ main {
   padding: 0;
 }
 
+@keyframes color {
+  0%   { background: #fa9df7; }
+  20%  { background: #aa81f7; }
+  40%  { background: #756ef5; }
+  60%  { background: #756ef5; }
+  80%  { background: #aa81f7; }
+  100% { background: #fa9df7; }
+}
+
 html,
 body {
   min-height: 100%;
@@ -36,6 +45,7 @@ body {
   font-size: 18px;
   letter-spacing: .1em;
   color: black;
+  animation: color 13s infinite linear;
 }
 
 h1,
@@ -90,8 +100,9 @@ a:hover {
 }
 
 header {
-  background: #a8e2e2;
+  animation: color 13s infinite linear;
   text-align: center;
+  justify-content: center;
 }
 
 header a {
@@ -281,7 +292,7 @@ button {
 
 a {
 	border-radius: 5px;
-	color: var(--primary);
+	/*color: var(--primary);*/
 	font-weight: 600;
 	padding: 2px 4px;
 	margin-left: -2px;
